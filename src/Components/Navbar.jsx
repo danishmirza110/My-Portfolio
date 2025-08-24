@@ -24,7 +24,7 @@ const Navbar = ({ selectedTab, setSelectedTab }) => {
     <nav className={`navbar navbar-expand-lg fixed-top ${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
       <div className="container">
         <a className={`navbar-brand fw-bold ${styles.navBrand}`} href="#home" onClick={() => setSelectedTab("Home")}>
-          MirzaDanish
+          Mirza Danish 
         </a>
         
         {/* --- UPDATED BUTTON --- */}
