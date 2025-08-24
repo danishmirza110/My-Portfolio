@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import styles from './css-modules/Home.module.css'; // Assuming your CSS module is here
+import styles from './css-modules/Home.module.css';
 
 const Home = ({ setSelectedTab }) => {
   useEffect(() => {
@@ -15,41 +15,45 @@ const Home = ({ setSelectedTab }) => {
         <div className="row align-items-center">
 
           {/* Left: Text Content */}
-          <div className="col-lg-6 col-md-12" data-aos="fade-right">
+          <div className="col-lg-7 col-md-12" data-aos="fade-right">
             <h1 className={`display-4 fw-bold lh-1 mb-3 ${styles.nameText}`}>
               Hi, I'm <span className={styles.highlight}>Mirza Danish</span>
             </h1>
             <h3 className={`mb-4 ${styles.jobTitle}`}>Frontend Developer</h3>
             <p className={`lead ${styles.description}`}>
-              Creative and detail-oriented Front-End Developer with a passion for building responsive, user-friendly web interfaces. Proficient in HTML, CSS, JavaScript, and modern frameworks like React.js and Bootstrap.
+              I build engaging and user-friendly web interfaces. My passion lies in turning creative ideas into responsive, real-world applications.
             </p>
             
-            {/* UPDATED: Button Wrapper with two buttons */}
             <div className={styles.buttonWrapper}>
                 <a href="#projects" className={`btn btn-lg mt-4 ${styles.ctaButton}`} onClick={() => setSelectedTab("Projects")}>
                     View My Work
                 </a>
-                {/* --- NEW RESUME BUTTON ADDED HERE --- */}
                 <a 
-                  href="/Resume.pdf" // This links to the file in the public folder
-                  download="MirzaDanish-Resume.pdf" // This tells the browser to download it with this name
+                  href="/resume.pdf"
+                  download="MirzaDanish-Resume.pdf"
                   className={`btn btn-lg mt-4 ${styles.ctaButtonSecondary}`}
                 >
                     Download Resume
                 </a>
             </div>
-
           </div>
 
-          {/* Right: Personal Image */}
-          <div className="col-lg-6 col-md-12 text-center mt-5 mt-lg-0" data-aos="fade-left">
+          {/* Right: Animated Profile Image */}
+          <div className="col-lg-5 col-md-12 text-center mt-5 mt-lg-0" data-aos="fade-left">
             <img
-              src="https://via.placeholder.com/350x350.png?text=Your+Image"
+              src="/image.png" // Assumes your image is in the 'public' folder
               alt="Mirza Danish"
-              className={`img-fluid rounded-circle shadow-lg ${styles.profileImage}`}
+              className={`img-fluid ${styles.profileImage}`}
             />
           </div>
         </div>
+      </div>
+      
+      {/* --- NEW SCROLL DOWN INDICATOR --- */}
+      <div className={styles.scrollDownIndicator}>
+        <a href="#about">
+          <span></span>
+        </a>
       </div>
     </section>
   );

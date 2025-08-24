@@ -1,18 +1,7 @@
 /* ---- Main Home Section ---- */
 .homeSection {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
-  animation: gradientBG 15s ease infinite;
-  color: #ffffff; /* Set primary text color to white for contrast */
+  position: relative; /* Needed for the scroll indicator */
 }
-
-/* Keyframe animation for the background */
-@keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
 
 /* ---- Typography ---- */
 .nameText {
@@ -21,62 +10,121 @@
 }
 
 .highlight {
-  color: #c7d2fe; /* A lighter, more subtle highlight color */
+  color: #c7d2fe;
 }
 
 .jobTitle {
-  color: #e0e7ff; /* A slightly off-white for subtitle */
-  font-weight: 300; /* Lighter font weight */
+  color: #e0e7ff;
+  font-weight: 300;
   letter-spacing: 1px;
 }
 
 .description {
-  color: #e0e7ff; /* Consistent off-white for readability */
-  max-width: 600px; /* Constrain line length for easier reading */
+  color: #e0e7ff;
+  max-width: 600px;
 }
 
+/* ---- Buttons ---- */
+.buttonWrapper {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
 
-/* ---- Call-to-Action Button ---- */
 .ctaButton {
   background-color: #c7d2fe;
-  color: #3730a3; /* Darker color for text for high contrast */
+  color: #3730a3;
   border: none;
   padding: 12px 30px;
   font-weight: bold;
-  border-radius: 50px; /* Pill-shaped button */
+  border-radius: 50px;
   transition: all 0.3s ease-in-out;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .ctaButton:hover {
-  transform: translateY(-3px); /* Lifts the button on hover */
+  transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
   background-color: #fff;
 }
 
-
-/* ---- Profile Image ---- */
-.profileImage {
-  max-width: 350px;
-  border: 5px solid rgba(255, 255, 255, 0.5); /* Adds a subtle border */
-}
-
-
-/* ---- Add this new class to Home.module.css ---- */
-
 .ctaButtonSecondary {
   background-color: transparent;
-  color: #c7d2fe; /* Highlight color for text */
+  color: #c7d2fe;
   border: 2px solid #c7d2fe;
-  padding: 10px 30px; /* Adjust padding to match the border */
+  padding: 10px 30px;
   font-weight: bold;
   border-radius: 50px;
   transition: all 0.3s ease-in-out;
-  margin-left: 15px; /* Adds space between the buttons */
 }
 
 .ctaButtonSecondary:hover {
   background-color: #c7d2fe;
-  color: #3730a3; /* Darker color for text on hover */
+  color: #3730a3;
   transform: translateY(-3px);
+}
+
+/* ---- Animated Profile Image ---- */
+.profileImage {
+  max-width: 350px;
+  border-radius: 50%;
+  border: 5px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  animation: floatAnimation 4s ease-in-out infinite;
+}
+
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    transform: translateY(-15px);
+    box-shadow: 0 25px 40px rgba(199, 210, 254, 0.2);
+  }
+  100% {
+    transform: translateY(0);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* ---- Scroll Down Indicator ---- */
+.scrollDownIndicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.scrollDownIndicator a {
+  display: block;
+}
+
+.scrollDownIndicator span {
+  display: block;
+  width: 24px;
+  height: 40px;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50px;
+  position: relative;
+}
+
+.scrollDownIndicator span::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 100%;
+  transform: translateX(-50%);
+  animation: scroll-animation 2s infinite;
+}
+
+@keyframes scroll-animation {
+  0% { transform: translate(-50%, 0); opacity: 0; }
+  40% { opacity: 1; }
+  80% { transform: translate(-50%, 15px); opacity: 0; }
+  100% { opacity: 0; }
 }
