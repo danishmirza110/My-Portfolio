@@ -1,0 +1,75 @@
+/* ---- 1. Google Font Import ---- */
+/* We're importing "Poppins", a popular and clean font for web design */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ---- 2. CSS Variables for Easy Theme Management ---- */
+:root {
+  --primary-font: 'Poppins', sans-serif;
+  --highlight-color: #c7d2fe;
+  --text-primary: #ffffff;
+  --text-secondary: #e0e7ff;
+  --background-dark: rgba(10, 10, 20, 0.5);
+}
+
+/* ---- 3. Main Body and Global Styles ---- */
+body {
+  font-family: var(--primary-font);
+  color: var(--text-secondary);
+  /* This is the animated gradient background for the whole page */
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  overflow-x: hidden; /* Prevents horizontal scroll */
+}
+
+/* Keyframe animation for the background */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ---- 4. Global Typography ---- */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+p {
+  line-height: 1.8;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ---- 5. Custom Scrollbar ---- */
+/* This makes the scrollbar match the dark theme */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a2e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #818cf8;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6366f1;
+}
+
+/* ---- 6. Miscellaneous ---- */
+/* Smooth scrolling behavior for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom text selection color */
+::selection {
+  background-color: var(--highlight-color);
+  color: #1e1b4b;
+}

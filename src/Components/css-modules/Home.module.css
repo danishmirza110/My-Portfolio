@@ -1,0 +1,82 @@
+/* ---- Main Home Section ---- */
+.homeSection {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: #ffffff; /* Set primary text color to white for contrast */
+}
+
+/* Keyframe animation for the background */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+/* ---- Typography ---- */
+.nameText {
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.highlight {
+  color: #c7d2fe; /* A lighter, more subtle highlight color */
+}
+
+.jobTitle {
+  color: #e0e7ff; /* A slightly off-white for subtitle */
+  font-weight: 300; /* Lighter font weight */
+  letter-spacing: 1px;
+}
+
+.description {
+  color: #e0e7ff; /* Consistent off-white for readability */
+  max-width: 600px; /* Constrain line length for easier reading */
+}
+
+
+/* ---- Call-to-Action Button ---- */
+.ctaButton {
+  background-color: #c7d2fe;
+  color: #3730a3; /* Darker color for text for high contrast */
+  border: none;
+  padding: 12px 30px;
+  font-weight: bold;
+  border-radius: 50px; /* Pill-shaped button */
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.ctaButton:hover {
+  transform: translateY(-3px); /* Lifts the button on hover */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+}
+
+
+/* ---- Profile Image ---- */
+.profileImage {
+  max-width: 350px;
+  border: 5px solid rgba(255, 255, 255, 0.5); /* Adds a subtle border */
+}
+
+
+/* ---- Add this new class to Home.module.css ---- */
+
+.ctaButtonSecondary {
+  background-color: transparent;
+  color: #c7d2fe; /* Highlight color for text */
+  border: 2px solid #c7d2fe;
+  padding: 10px 30px; /* Adjust padding to match the border */
+  font-weight: bold;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+  margin-left: 15px; /* Adds space between the buttons */
+}
+
+.ctaButtonSecondary:hover {
+  background-color: #c7d2fe;
+  color: #3730a3; /* Darker color for text on hover */
+  transform: translateY(-3px);
+}

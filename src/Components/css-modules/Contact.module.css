@@ -1,0 +1,82 @@
+/* ---- Main Contact Section ---- */
+.contactSection {
+  /* background-color: rgba(0, 0, 0, 0.2); */
+  padding: 80px 0;
+  color: #e0e7ff;
+}
+
+.sectionTitle {
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* ---- Glassmorphism Card ---- */
+.contactCard {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* ---- Form Inputs ---- */
+.formInput {
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  border-radius: 8px;
+  padding: 12px 15px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formInput::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.formInput:focus {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  border-color: #c7d2fe;
+  box-shadow: 0 0 0 0.25rem rgba(199, 210, 254, 0.25);
+}
+
+/* ---- Submit Button ---- */
+.submitButton {
+  background-color: #c7d2fe;
+  color: #3730a3;
+  border: none;
+  padding: 12px 35px;
+  font-weight: bold;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.submitButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+}
+
+/* ---- Social Media Icons ---- */
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.socialIcons a {
+  color: #e0e7ff;
+  font-size: 2.5rem; /* Larger icons */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.socialIcons a:hover {
+  color: #c7d2fe;
+  transform: scale(1.2);
+}

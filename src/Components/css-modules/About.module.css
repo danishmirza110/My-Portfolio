@@ -1,0 +1,38 @@
+/* ---- Main About Section Style ---- */
+.aboutSection {
+  /* background-color: rgba(0, 0, 0, 0.2); Semi-transparent dark background to see the main gradient */
+  padding: 80px 0;
+  color: #e0e7ff; /* Soft white text color for readability */
+}
+
+/* ---- Section Title ---- */
+.sectionTitle {
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* ---- Profile Image ---- */
+.profileImage {
+  max-width: 300px;
+  border: 5px solid rgba(255, 255, 255, 0.5); /* Adds a nice frame */
+  transition: transform 0.3s ease-in-out;
+}
+
+.profileImage:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* ---- About Text Content ---- */
+.aboutText {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.aboutText strong {
+  color: #c7d2fe; /* Highlight color for keywords */
+  font-weight: 600;
+}

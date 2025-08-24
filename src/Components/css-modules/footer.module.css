@@ -1,0 +1,33 @@
+/* ---- Main Footer Style ---- */
+.footer {
+  background-color: rgba(10, 10, 20, 0.5); /* Dark, semi-transparent to match navbar */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  color: #e0e7ff;
+  padding: 30px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle top border */
+}
+
+/* ---- Social Media Icons ---- */
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  gap: 25px; /* Space between icons */
+}
+
+.socialIcons a {
+  color: #e0e7ff;
+  font-size: 1.8rem; /* Icon size */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.socialIcons a:hover {
+  color: #c7d2fe; /* Highlight color on hover */
+  transform: translateY(-3px); /* Lifts the icon on hover */
+}
+
+/* ---- Copyright Text ---- */
+.copyrightText {
+  color: rgba(224, 231, 255, 0.7); /* Slightly more transparent text */
+  letter-spacing: 0.5px;
+}

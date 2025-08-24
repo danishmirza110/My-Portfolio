@@ -1,0 +1,100 @@
+/* ---- Base Navbar Style ---- */
+.navbar {
+  transition: background-color 0.4s ease-in-out, backdrop-filter 0.4s ease-in-out;
+  padding: 15px 0;
+}
+
+/* ---- Scrolled State (Glassmorphism) ---- */
+.navbar.scrolled {
+  background-color: rgba(10, 10, 20, 0.5); /* Dark, semi-transparent background */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ---- Navbar Brand/Logo ---- */
+.navBrand {
+  color: #fff !important;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* ---- Navbar Links ---- */
+.navLink {
+  color: #e0e7ff !important; /* Off-white for links */
+  font-weight: 500;
+  margin: 0 10px;
+  position: relative;
+  transition: color 0.3s ease;
+  padding-bottom: 8px;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #c7d2fe;
+  transition: width 0.3s ease;
+}
+
+.navLink:hover {
+  color: #fff !important;
+}
+
+.navLink:hover::after {
+  width: 50%;
+}
+
+/* ---- Active Link Style ---- */
+.navLink.active {
+  color: #fff !important;
+  font-weight: 700;
+}
+
+.navLink.active::after {
+  width: 50%;
+}
+
+/* ---- Navbar Toggler (for mobile) ---- */
+.navbarTogglerIcon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+
+/* Override Bootstrap's default border */
+.navbar-toggler {
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Ensure the collapsed menu has the glass effect on mobile */
+/* ---- Add this to the end of navbar.module.css ---- */
+/* ---- It replaces all previous @media blocks ---- */
+
+@media (max-width: 991.98px) {
+  /* This styles the collapsed menu background */
+  .navbar .navbar-collapse {
+    background-color: rgba(10, 10, 20, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 10px;
+  }
+  
+  /* This styles our new custom button */
+  .customToggler {
+    border: 2px solid #fff !important; /* A clear white border */
+    color: #fff !important; /* This sets the icon color */
+    font-size: 1rem; /* This sets the icon size */
+  }
+
+  /* Remove the default focus outline */
+  .customToggler:focus {
+    box-shadow: none;
+  }
+}

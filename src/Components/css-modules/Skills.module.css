@@ -1,0 +1,63 @@
+/* ---- Main Skills Section ---- */
+.skillsSection {
+  /* This section should be transparent to show the App.css background */
+  padding: 80px 0;
+}
+
+.sectionTitle {
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* ---- Skills Grid Layout ---- */
+.skillsGrid {
+  display: grid;
+  /* Creates a responsive grid that fits as many icons as possible */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* ---- Individual Skill Card (Glassmorphism) ---- */
+.skillCard {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 30px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.skillCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.35);
+}
+
+.iconWrapper {
+  font-size: 4rem; /* Makes the icon large */
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.skillCard:hover .iconWrapper {
+    transform: scale(1.1);
+}
+
+.skillName {
+  font-weight: 500;
+  color: #e0e7ff; /* Soft white color for the text */
+  font-size: 1.1rem;
+}
+
+/* In Skills.module.css, add the box-shadow line to the existing :hover rule */
+.skillCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(199, 210, 254, 0.4); /* <-- Add this glow effect */
+}

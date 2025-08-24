@@ -1,0 +1,100 @@
+/* ---- Main Projects Section ---- */
+.projectSection {
+  /* background-color: rgba(0, 0, 0, 0.2); */
+  padding: 80px 0;
+}
+
+.sectionTitle {
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+/* In Projects.module.css, add the box-shadow line to the existing :hover rule */
+.projectCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(199, 210, 254, 0.4); /* <-- Add this glow effect */
+}
+
+/* ---- Glassmorphism Card Effect ---- */
+.projectCard {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.projectCard:hover {
+  transform: translateY(-10px);
+}
+
+.cardImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.cardBody {
+  padding: 25px;
+  color: #e0e7ff;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Allows the body to take up remaining space */
+}
+
+.cardTitle {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.cardText {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  flex-grow: 1; /* Pushes the tags and links down */
+}
+
+.cardTags {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  background-color: rgba(199, 210, 254, 0.2);
+  color: #c7d2fe;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.cardLinks {
+  margin-top: 25px;
+  display: flex;
+  gap: 15px;
+}
+
+.cardButton {
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid #c7d2fe;
+  padding: 8px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cardButton:hover {
+  background-color: #c7d2fe;
+  color: #3730a3;
+}
