@@ -31,7 +31,7 @@ const Home = ({ setSelectedTab }) => {
                 </a>
                 {/* --- NEW RESUME BUTTON ADDED HERE --- */}
                 <a 
-                  href="/resume.pdf" // This links to the file in the public folder
+                  href="/Resume.pdf" // This links to the file in the public folder
                   download="MirzaDanish-Resume.pdf" // This tells the browser to download it with this name
                   className={`btn btn-lg mt-4 ${styles.ctaButtonSecondary}`}
                 >
