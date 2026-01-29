@@ -38,8 +38,6 @@ function App() {
   return (
     <>
       <Navbar setSelectedTab={setSelectedTab} selectedTab={selectedTab} />
-
-      {/* --- Wrap the dynamic content in Suspense --- */}
       <Suspense fallback={<LoadingSpinner />}>
         <ContentToShow />
       </Suspense>

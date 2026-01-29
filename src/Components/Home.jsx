@@ -41,7 +41,7 @@ const Home = ({ setSelectedTab }) => {
           {/* Right: Animated Profile Image */}
           <div className="col-lg-5 col-md-12 text-center mt-5 mt-lg-0" data-aos="fade-left">
             <img
-              src="/image.png" // Assumes your image is in the 'public' folder
+              src="/image.JPG" // Assumes your image is in the 'public' folder
               alt="Mirza Danish"
               className={`img-fluid ${styles.profileImage}`}
             />

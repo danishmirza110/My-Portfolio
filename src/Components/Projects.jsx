@@ -7,27 +7,27 @@ import styles from './css-modules/Projects.module.css'; // Import the CSS module
 // Updated project data with more details
 const projectsData = [
   {
-    image: 'https://via.placeholder.com/400x250.png?text=Portfolio+Website',
-    title: 'Modern Portfolio Website',
+    image: '/Resume.png',
+    title: 'Resume Matcher',
     description: 'A responsive personal portfolio built with React, featuring a dynamic UI and smooth animations to showcase my work.',
     tags: ['React', 'CSS Modules', 'Bootstrap', 'AOS'],
-    liveLink: '#',
-    sourceLink: '#',
+    liveLink: 'https://resume-matcher-fawn-kappa.vercel.app/',
+    sourceLink: 'https://resume-matcher-fawn-kappa.vercel.app/',
   },
   {
-    image: 'https://via.placeholder.com/400x250.png?text=Weather+App',
+    image: '/weather.png',
     title: 'Live Weather App',
     description: 'A sleek weather forecast app that provides real-time weather data using the OpenWeatherMap API and displays it beautifully.',
     tags: ['React', 'API', 'JavaScript'],
-    liveLink: '#',
-    sourceLink: '#',
+    liveLink: 'https://weather-app-okjl.vercel.app/',
+    sourceLink: 'https://weather-app-okjl.vercel.app/',
   },
   {
-    image: 'https://via.placeholder.com/400x250.png?text=Task+Manager',
-    title: 'Task Management App',
-    description: 'An intuitive to-do list application to help users organize their tasks, with features like local storage and task filtering.',
+    image: '/EMPS.png',
+    title: 'Employee Management System',
+    description: 'A full-stack CRUD application built with React for managing organizational employee records, featuring an administrative dashboard.',
     tags: ['React', 'JavaScript', 'Local Storage'],
-    liveLink: '#',
+    liveLink: 'https://employee-management-system-chi-fawn.vercel.app/',
     sourceLink: '#',
   }
 ];
@@ -59,7 +59,7 @@ const Projects = () => {
                   </div>
                   <div className={styles.cardLinks}>
                     <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className={styles.cardButton}>Live Demo</a>
-                    <a href={project.sourceLink} target="_blank" rel="noopener noreferrer" className={styles.cardButton}>Source Code</a>
+                    {/* <a href={project.sourceLink} target="_blank" rel="noopener noreferrer" className={styles.cardButton}>Source Code</a> */}
                   </div>
                 </div>
               </div>
